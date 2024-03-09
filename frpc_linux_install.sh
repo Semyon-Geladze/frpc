@@ -94,15 +94,22 @@ mv ${FILE_NAME}/${FRP_NAME} ${FRP_PATH}
 # configure frpc.ini
 cat >${FRP_PATH}/${FRP_NAME}.ini <<EOF
 [common]
-server_addr = frp.freefrp.net
+server_addr = 38.207.173.227
 server_port = 7000
-token = freefrp.net
+token = cdj3'¥839sxx¥
 
-[web1_${RANDOM}]
+[ssh]
+type=tcp
+local_ip = 127.0.0.1
+local_port = 22
+remote_port = 22
+custom_domains = new-expert.tech
+
+[web1_casaos]
 type = http
-local_ip = 192.168.1.2
-local_port = 5000
-custom_domains = yourdomain${RANDOM}.com
+local_ip = 127.0.0.1
+local_port = 80
+custom_domains = co.new-expert.tech
 EOF
 
 # configure systemd
