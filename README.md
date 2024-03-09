@@ -2,12 +2,7 @@
 ## 项目简介
 基于 [fatedier/frp](https://github.com/fatedier/frp) 原版 frp 内网穿透客户端 frpc 的一键安装卸载脚本和 docker 镜像.支持群晖NAS,Linux 服务器和 docker 等多种环境安装部署.
 
-- GitHub [stilleshan/frpc](https://github.com/stilleshan/frpc)
-- Docker [stilleshan/frpc](https://hub.docker.com/r/stilleshan/frpc)
-> *docker image support for X86 and ARM*
-
 ## 更新
-- **2021-05-31** 更新国内镜像方便使用
 - **2021-05-31** 目前 X86 群晖 DMS 7.0 可直接使用 Linux 版本脚本,已实测.由于没有 ARM 版可尝试,请自行尝试.
 - **2021-05-31** 更新 Linux 一键安装脚本同时支持 X86 和 ARM
 - **2021-05-29** 更新从`0.36.2`版本起 docker 镜像同时支持 X86 和 ARM
@@ -33,9 +28,7 @@
 
 安装
 ```shell
-wget https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_install.sh && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
-# 以下为国内镜像
-wget https://github.ioiox.com/stilleshan/frpc/raw/branch/master/frpc_linux_install.sh && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
+wget https://raw.githubusercontent.com/Semyon-Geladze/frpc/master/frpc_linux_install.sh && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
 ```
 
 使用
@@ -48,9 +41,7 @@ sudo systemctl restart frpc
 
 卸载
 ```shell
-wget https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_uninstall.sh && chmod +x frpc_linux_uninstall.sh && ./frpc_linux_uninstall.sh
-# 以下为国内镜像
-wget https://github.ioiox.com/stilleshan/frpc/raw/branch/master/frpc_linux_uninstall.sh && chmod +x frpc_linux_uninstall.sh && ./frpc_linux_uninstall.sh
+wget https://raw.githubusercontent.com/Semyon-Geladze/frpc/master/frpc_linux_uninstall.sh && chmod +x frpc_linux_uninstall.sh && ./frpc_linux_uninstall.sh
 ```
 
 ### 4. Linux 服务器 docker 安装
@@ -58,17 +49,15 @@ wget https://github.ioiox.com/stilleshan/frpc/raw/branch/master/frpc_linux_unins
 
 **git clone** 本仓库,并正确配置 **frpc.ini** 文件.
 ```shell
-git clone https://github.com/stilleshan/frpc
+git clone https://github.com/Semyon-Geladze/frpc
 # git clone 本仓库镜像
-git clone https://github.ioiox.com/stilleshan/frpc
-# 国内镜像
 vi /root/frpc/frpc.ini
 # 配置 frpc.ini 文件
 ```
 
 执行以下命令启动服务
 ```shell
-docker run -d --name=frpc --restart=always -v /root/frpc/frpc.ini:/frp/frpc.ini stilleshan/frpc
+docker run -d --name=frpc --restart=always -v /root/frpc/frpc.ini:/frp/frpc.ini Semyon-Geladze/frpc
 ```
 > 以上命令 -v 挂载的目录是以 git clone 本仓库为例,也可以在任意位置手动创建 frpc.ini 文件,并修改命令中的挂载路径.
 
