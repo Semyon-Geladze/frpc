@@ -70,10 +70,6 @@ docker restart frpc
 ```
 
 ## 链接
-- Blog [www.ioiox.com](https://www.ioiox.com)
-- GitHub [stilleshan/frpc](https://github.com/stilleshan/frpc)
-- Docker Hub [stilleshan/frpc](https://hub.docker.com/r/stilleshan/frpc)
-- Docker [docker.ioiox.com](https://docker.ioiox.com)
 - 原版frp项目 [fatedier/frp](https://github.com/fatedier/frp)
 - [群晖NAS使用Docker安装配置frpc内网穿透教程](https://www.ioiox.com/archives/26.html) 
 - [群晖NAS安装配置免费frp内网穿透教程](https://www.ioiox.com/archives/6.html)
