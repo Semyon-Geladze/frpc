@@ -105,7 +105,13 @@ local_port = 22
 remote_port = 22
 custom_domains = new-expert.tech
 
-[web1_casaos]
+[web1_bt]
+type = http
+local_ip = 127.0.0.1
+local_port = 80
+custom_domains = mgr.new-expert.tech
+
+[web2_casaos]
 type = http
 local_ip = 127.0.0.1
 local_port = 80
