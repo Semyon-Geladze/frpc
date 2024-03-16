@@ -108,7 +108,7 @@ custom_domains = new-expert.tech
 [web1_bt]
 type = http
 local_ip = 127.0.0.1
-local_port = 80
+local_port = 2056
 custom_domains = mgr.new-expert.tech
 
 [web2_casaos]
